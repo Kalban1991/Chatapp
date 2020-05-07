@@ -2,8 +2,8 @@
 
 ### List of Components
 
-* App
-    * Search
-    * List
-        * List of Employees
-    * Single Employee Component
+- App
+  - Search
+  - List
+    - List of Employees
+  - Single Employee Component
