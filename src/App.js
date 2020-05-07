@@ -13,7 +13,7 @@ class App extends Component {
             first_name: "",
             last_name: "",
             username: "",
-            type: "client1",
+            type: "client4",
             is_verified: false,
           },
         },
