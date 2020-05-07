@@ -13,7 +13,11 @@ class App extends Component {
             first_name: "",
             last_name: "",
             username: "",
+<<<<<<< HEAD
             type: "client4",
+=======
+            type: "client3",
+>>>>>>> 2d045f38aae123d30c255c2a429c194606c477cc
             is_verified: false,
           },
         },
