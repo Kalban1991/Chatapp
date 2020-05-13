@@ -1,0 +1,54 @@
+.chat-empty {
+  width: 1440px;
+  height: 900px;
+  background-color: var(--pale-grey);
+}
+.rectangle-copy {
+  position: relative;
+  width: 768px;
+  height: 720px;
+  border-radius: 8px;
+  border: solid 1px #efeff4;
+  background-color: #ffffff;
+}
+.start-messaging-agen {
+  position: absolute;
+  top: 400px;
+  left: 200px;
+  width: 320px;
+  height: 40px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: center;
+  color: #94a4ba;
+}
+.rectangle {
+  width: 768px;
+  height: 67px;
+  position: absolute;
+  bottom: 5px;
+  left: 30px;
+}
+
+.write-a-message {
+  width: 648px;
+  height: 20px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #94a4ba;
+}
+.message {
+  width: 40px;
+  height: 24px;
+  object-fit: contain;
+}
