@@ -7,6 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      showMsgs: false,
       rooms: [
         {
           id: 1,
@@ -78,6 +79,11 @@ class App extends Component {
     console.log("back");
   }
 
+  goToMsg = () => {
+    console.log("show msgs true");
+    this.setState({ showMsgs: true });
+  };
+
   getApiData = () => {
     fetch(
       "https://www.yurtah.com/api/v1/chats/1/messages/?page=1&token=QUvLofAGq0bwtiKDPUaGWWHfnF4"
@@ -103,14 +109,16 @@ class App extends Component {
     return (
       <div class="main-window">
         <div className="comp">
-          <ListofPeople pplList={this.state.rooms} />
+          <ListofPeople pplList={this.state.rooms} goToMsg={this.goToMsg} />
         </div>
         <div className="comp">
-          <MessagesView
-            msgsList={this.state.chats}
-            sendMsg={this.sendMessage}
-            goBack={this.goBack}
-          />
+          {this.state.showMsgs && (
+            <MessagesView
+              msgsList={this.state.chats}
+              sendMsg={this.sendMessage}
+              goBack={this.goBack}
+            />
+          )}
         </div>
       </div>
     );
