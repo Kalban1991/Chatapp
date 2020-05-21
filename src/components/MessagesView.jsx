@@ -17,19 +17,22 @@ class MessagesView extends Component {
     this.props.sendMsg("msg");
     return (
 
-      <div className="chat-empty">
+
+
+<!--       <div className="chat-empty">
         <div className="rectangle-copy ">
           <img src={dogImg} class="no-Message" />
 
           <div className="start-messaging-agen">
-            Start messaging agents, sellers, or even your friends
-=======
+            Start messaging agents, sellers, or even your friends -->
+
       <React.Fragment>
         <React.Fragment>
         {   
           !this.state.hasMsgs && 
           <div className="chat-empty">
             <div className="rectangle-copy ">
+              <img src={dogImg} class="no-Message" />
               <div className="start-messaging-agen">
                 Start messaging agents, sellers, or even your friends
               </div>
