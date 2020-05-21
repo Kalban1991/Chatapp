@@ -101,7 +101,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h2>Main Page</h2>
+        <h2>Header</h2>
         <ListofPeople pplList={this.state.rooms} />
         <MessagesView
           msgsList={this.state.chats}
