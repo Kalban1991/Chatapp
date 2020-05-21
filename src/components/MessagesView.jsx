@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./MessagesView.css";
 import messageImg from "./img/message.png";
+import dogImg from "./img/no-message.png";
 
 class MessagesView extends Component {
   render() {
@@ -8,6 +9,8 @@ class MessagesView extends Component {
     return (
       <div className="chat-empty">
         <div className="rectangle-copy ">
+          <img src={dogImg} class="no-Message" />
+
           <div className="start-messaging-agen">
             Start messaging agents, sellers, or even your friends
           </div>
