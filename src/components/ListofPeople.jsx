@@ -21,7 +21,7 @@ class ListofPeople extends Component {
             </div>
             <div className="created-date">5d ago</div>
             <div className="conversation-message">
-              Paid for the order video yesterday when we where talking{" "}
+              Paid for the order video yesterday when we where
             </div>
           </div>
         </div>
