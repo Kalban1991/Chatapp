@@ -1,0 +1,92 @@
+.chat-empty {
+  width: 768px;
+  height: 720px;
+  background-color: var(--pale-grey);
+  display: inline-block;
+}
+
+.chat-full {
+  display: inline-block;
+  width: 768px;
+  height: 720px;
+  background-color: var(--pale-grey);
+}
+.rectangle-copy {
+  display: inline-block;
+  position: relative;
+  width: 768px;
+  height: 720px;
+  border-radius: 8px;
+  border: solid 1px #efeff4;
+  background-color: #ffffff;
+}
+.start-messaging-agen {
+  position: absolute;
+  top: 400px;
+  left: 20px;
+  width: 320px;
+  height: 40px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: center;
+  color: #94a4ba;
+}
+.no-Message {
+  width: 320px;
+  height: 352px;
+  position: absolute;
+  left: 220px;
+  top: 100px;
+  object-fit: contain;
+}
+.rectangle {
+  width: 768px;
+  height: 67px;
+  position: absolute;
+  bottom: 5px;
+  left: 30px;
+}
+
+.write-a-message {
+  width: 648px;
+  height: 20px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #94a4ba;
+}
+.message {
+  width: 40px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.their-msg {
+  padding-top: 10px;
+  width: 336px;
+  height: 72px;
+  border-radius: 15px;
+  border: solid 1px #efeff4;
+  background-color: #f0b5f0;
+  color: #000000;
+}
+
+.my-msg {
+  padding-top: 10px;
+  margin-left: 400px;
+  width: 336px;
+  height: 92px;
+  border-radius: 15px;
+  background-color: #94a4ba;
+  color: #ffffff;
+}
+

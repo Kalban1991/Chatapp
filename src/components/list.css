@@ -1,4 +1,5 @@
 .wrapper {
+  display: inline-block;
   top: 90px;
   width: 352px;
   height: 720px;
