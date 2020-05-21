@@ -3,6 +3,12 @@
   height: 900px;
   background-color: var(--pale-grey);
 }
+
+.chat-full {
+  width: 1440px;
+  height: 900px;
+  background-color: var(--pale-grey);
+}
 .rectangle-copy {
   position: relative;
   width: 768px;
@@ -14,7 +20,7 @@
 .start-messaging-agen {
   position: absolute;
   top: 400px;
-  left: 200px;
+  left: 20px;
   width: 320px;
   height: 40px;
   font-family: Roboto;
@@ -51,4 +57,24 @@
   width: 40px;
   height: 24px;
   object-fit: contain;
+}
+
+.their-msg {
+  padding-top: 10px;
+  width: 336px;
+  height: 72px;
+  border-radius: 15px;
+  border: solid 1px #efeff4;
+  background-color: #f0b5f0;
+  color: #000000;
+}
+
+.my-msg {
+  padding-top: 10px;
+  margin-left: 400px;
+  width: 336px;
+  height: 92px;
+  border-radius: 15px;
+  background-color: #94a4ba;
+  color: #ffffff;
 }
