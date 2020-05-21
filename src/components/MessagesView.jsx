@@ -7,7 +7,7 @@ class MessagesView extends Component {
   constructor() {
     super();
     this.state = {
-      hasMsgs: true,
+      hasMsgs: 2,
     };
   }
 
