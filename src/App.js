@@ -14,7 +14,7 @@ class App extends Component {
             first_name: "",
             last_name: "",
             username: "",
-            type: "client4",
+            type: "client",
             is_verified: false,
           },
         },
@@ -101,6 +101,7 @@ class App extends Component {
 
   render() {
     return (
+
       <div class="main-window">
         <div className="comp">
           <ListofPeople pplList={this.state.rooms} />
@@ -112,6 +113,8 @@ class App extends Component {
             goBack={this.goBack}
           />
         </div>
+
+
       </div>
     );
   }

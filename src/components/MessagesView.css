@@ -36,6 +36,14 @@
   text-align: center;
   color: #94a4ba;
 }
+.no-Message {
+  width: 320px;
+  height: 352px;
+  position: absolute;
+  left: 220px;
+  top: 100px;
+  object-fit: contain;
+}
 .rectangle {
   width: 768px;
   height: 67px;
@@ -81,3 +89,4 @@
   background-color: #94a4ba;
   color: #ffffff;
 }
+
