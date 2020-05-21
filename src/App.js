@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ListofPeople from "./components/ListofPeople";
 import MessagesView from "./components/MessagesView";
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -100,14 +101,17 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Main Page</h2>
-        <ListofPeople pplList={this.state.rooms} />
-        <MessagesView
-          msgsList={this.state.chats}
-          sendMsg={this.sendMessage}
-          goBack={this.goBack}
-        />
+      <div class="main-window">
+        <div className="comp">
+          <ListofPeople pplList={this.state.rooms} />
+        </div>
+        <div className="comp">
+          <MessagesView
+            msgsList={this.state.chats}
+            sendMsg={this.sendMessage}
+            goBack={this.goBack}
+          />
+        </div>
       </div>
     );
   }
