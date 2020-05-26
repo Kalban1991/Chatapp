@@ -1,16 +1,12 @@
 .wrapper {
   display: inline-block;
   top: 90px;
+  margin-left: 160px;
   width: 352px;
   height: 720px;
   border-radius: 8px;
   border: solid 1px #efeff4;
   background-color: #ffffff;
-  /* width: 24.4444%;
-  height: 80%;
-  left: 11.1111%;
-  top: 10%;
-  position: absolute; */
 }
 .user-info {
   padding: 10px;
@@ -28,7 +24,7 @@
 .header-name {
   width: 37px;
   height: 24px;
-  font-family: Roboto;
+  font-family: "Roboto";
   font-size: 17px;
   font-weight: bold;
   font-stretch: normal;
@@ -37,73 +33,6 @@
   letter-spacing: 0.4px;
   color: #3e416d;
 }
-/* 
-.user {
-  width: 352px;
-  height: 64px;
-  border: solid 1px #efeff4;
-  background-color: #ffffff;
-  padding: 10px;
-  box-sizing: border-box;
-  margin-top: 10px;
-}
-.icon {
-  width: 48px;
-  height: 48px;
-  display: inline-block;
-}
-.icon-img {
-  width: 48px;
-  height: 48px;
-  border-radius: 30px;
-}
-.name {
-  display: inline-block;
-  width: 97px;
-  height: 20px;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.25;
-  letter-spacing: normal;
-  color: #3e416d;
-}
-
-.time {
-  display: inline-block;
-  width: 37px;
-  height: 12px;
-  font-family: Roboto;
-  font-size: 11px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.09;
-  letter-spacing: 0.4px;
-  color: #94a4ba;
-}
-
-.last-msg {
-  width: 224px;
-  height: 16px;
-  font-family: Roboto;
-  font-size: 13px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.23;
-  letter-spacing: 0.4px;
-  color: #647790;
-  border-bottom: 1px solid #efeff4;
-} */
-
-/* test */
-
-/* .conversation-list {
-  grid-area: container;
-} */
 .conversation {
   display: grid;
   grid-template-columns: 40px 2fr max-content;
@@ -131,22 +60,11 @@
   border-radius: 100%;
 }
 
-/* .icon {
-  width: 48px;
-  height: 48px;
-  display: inline-block;
-}
-.icon-img {
-  width: 48px;
-  height: 48px;
-  border-radius: 30px;
-} */
-
 .created-date {
   /* display: inline-block; */
   /* width: 37px;
   height: 12px; */
-  font-family: Roboto;
+  font-family: "Roboto";
   font-size: 11px;
   font-weight: normal;
   font-stretch: normal;
@@ -160,9 +78,9 @@
 .title-text {
   /* width: 224px;
   height: 16px; */
-  font-family: Roboto;
+  font-family: "Roboto";
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 400;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.25;
@@ -181,7 +99,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: Roboto;
+  font-family: "Roboto";
   font-size: 13px;
   font-weight: normal;
   font-stretch: normal;

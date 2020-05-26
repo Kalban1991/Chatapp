@@ -7,7 +7,11 @@ class MessagesView extends Component {
   constructor() {
     super();
     this.state = {
+<<<<<<< Updated upstream
       hasMsgs: true,
+=======
+      hasMsgs: 1,
+>>>>>>> Stashed changes
     };
   }
 

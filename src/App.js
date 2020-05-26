@@ -48,7 +48,7 @@ class App extends Component {
               is_verified: false,
               objects: [],
             },
-            content: "message",
+            content: "message hey",
             timestamp: "2020-03-09T08:08:21.380493-04:00",
           },
           {
@@ -63,7 +63,7 @@ class App extends Component {
               is_verified: false,
               objects: [],
             },
-            content: "message",
+            content: "message we are testing",
             timestamp: "2020-03-09T08:08:21.164620-04:00",
           },
         ],
