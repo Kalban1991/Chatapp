@@ -52,9 +52,12 @@ class MessagesView extends Component {
                 <div className="start-messaging-agen">
                   {messages.map((msg) => {
                     return (
+                      <React.Fragment>
+                        <div class ="avatar"></div>
                       <div className={msg.id === myId ? "my-msg" : "their-msg"}>
                         {msg.content}
                       </div>
+                      </React.Fragment>
                     );
                   })}
                 </div>
