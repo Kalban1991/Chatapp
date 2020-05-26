@@ -5,27 +5,34 @@
   display: inline-block;
 }
 
+.avatar {
+  position: relative;
+    left: 10px;
+    border: solid 1px;
+    height: 24px;
+    width: 24px;
+}
 .chat-full {
-  display: inline-block;
+  /* display: inline-block; */
   width: 768px;
   height: 720px;
   background-color: var(--pale-grey);
 }
 .rectangle-copy {
-  display: inline-block;
-  position: relative;
-  width: 768px;
-  height: 720px;
+  /* display: inline-block;
+  position: relative; */
+  width: 100%;
+  height: 100%;
   border-radius: 8px;
   border: solid 1px #efeff4;
   background-color: #ffffff;
 }
 .start-messaging-agen {
-  position: absolute;
+  /* position: absolute;
   top: 400px;
-  left: 20px;
-  width: 320px;
-  height: 40px;
+  left: 20px; */
+  width: 100%;
+  height: 90%;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
@@ -47,9 +54,9 @@
 .rectangle {
   width: 768px;
   height: 67px;
-  position: absolute;
-  bottom: 5px;
-  left: 30px;
+  /* position: absolute; */
+  /* bottom: 5px; */
+  /* left: 30px; */
 }
 
 .write-a-message {
@@ -72,21 +79,34 @@
 
 .their-msg {
   padding-top: 10px;
-  width: 336px;
-  height: 72px;
+  width: 65%;
+  min-height: 50px;
   border-radius: 15px;
   border: solid 1px #efeff4;
   background-color: #f0b5f0;
   color: #000000;
+  position: relative;
+  left: 50px;
+  bottom: 20px;
+  text-align: center;
 }
 
 .my-msg {
   padding-top: 10px;
   margin-left: 400px;
-  width: 336px;
-  height: 92px;
+  width: 70%;
   border-radius: 15px;
   background-color: #94a4ba;
-  color: #ffffff;
+  color: #ffffff; 
+
+  word-wrap: break-word;
+  /* float: right; */
+  margin-left: 200px;
+  position: relative;
+  /* left: 50px; */
+  bottom: 20px;
+  max-width: 85%;
+  box-sizing: inherit;
+  min-height: 50px;
 }
 

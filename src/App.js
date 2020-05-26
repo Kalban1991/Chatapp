@@ -52,6 +52,21 @@ class App extends Component {
             timestamp: "2020-03-09T08:08:21.380493-04:00",
           },
           {
+            id: 12,
+            author: {
+              first_name: "",
+              last_name: "",
+              email: "aibek.raiymbekov01@gmail.com",
+              phone: null,
+              username: "",
+              type: "client",
+              is_verified: false,
+              objects: [],
+            },
+            content: "m2",
+            timestamp: "2020-03-09T08:08:21.380493-04:00",
+          },
+          {
             id: 17,
             author: {
               first_name: "",
