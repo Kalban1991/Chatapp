@@ -7,9 +7,24 @@ class MessagesView extends Component {
   constructor() {
     super();
     this.state = {
+      writing: "",
       hasMsgs: true,
     };
   }
+
+  onChange = (e) => {
+    console.log("wrote", e.target.value);
+    this.setState({ writing: e.target.value });
+  };
+
+  clearOnChange = () => {
+    this.setState({ writing: "" });
+  };
+
+  sendBtn = () => {
+    this.props.sendBtn(this.state.writing);
+    this.clearOnChange();
+  };
 
   render() {
     const myId = 17;
@@ -53,10 +68,15 @@ class MessagesView extends Component {
                   {messages.map((msg) => {
                     return (
                       <React.Fragment>
-                        <div class ="avatar"></div>
-                      <div className={msg.id === myId ? "my-msg" : "their-msg"}>
-                        {msg.content}
-                      </div>
+                        <div class="avatar">
+                          {msg.id !== myId ? "pic" : null}
+                        </div>
+
+                        <div
+                          className={msg.id === myId ? "my-msg" : "their-msg"}
+                        >
+                          {msg.content}
+                        </div>
                       </React.Fragment>
                     );
                   })}
@@ -66,9 +86,12 @@ class MessagesView extends Component {
                     placeholder="Write a message"
                     type="text"
                     className="write-a-message"
+                    value={this.state.writing}
+                    onChange={this.onChange}
                   />
-
-                  <img src={messageImg} className="message" />
+                  <div className="sendBtn" onClick={this.sendBtn}>
+                    <img src={messageImg} className="message" />
+                  </div>
                 </div>
               </div>
             </div>
