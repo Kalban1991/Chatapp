@@ -93,8 +93,19 @@ class App extends Component {
   goBack() {
     console.log("back");
   }
+  sendBtn = (newMsg) => {
+    console.log("sendBtn state", this.state);
+    let { chats } = this.state;
+    let msg = { ...this.state.chats.results[0] };
+    msg.content = newMsg;
+    msg.id = 17;
+    chats.results.push(msg);
+
+    this.setState({ chats });
+  };
 
   goToMsg = () => {
+    console.log("sendBtn state", this.state);
     console.log("show msgs true");
     this.setState({ showMsgs: true });
   };
@@ -121,6 +132,7 @@ class App extends Component {
   }
 
   render() {
+    console.log("in render sendBtn state", this.state);
     return (
       <div class="main-window">
         <div className="comp">
@@ -132,6 +144,7 @@ class App extends Component {
               msgsList={this.state.chats}
               sendMsg={this.sendMessage}
               goBack={this.goBack}
+              sendBtn={this.sendBtn}
             />
           )}
         </div>
