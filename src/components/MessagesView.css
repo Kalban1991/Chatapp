@@ -57,6 +57,7 @@
   /* position: absolute; */
   /* bottom: 5px; */
   /* left: 30px; */
+  display: flex;
 }
 
 .write-a-message {
@@ -71,11 +72,11 @@
   letter-spacing: normal;
   color: #94a4ba;
 }
-.message {
-  width: 40px;
+/*.message {
+   width: 40px;
   height: 24px;
-  object-fit: contain;
-}
+  object-fit: contain; 
+}*/
 
 .their-msg {
   padding-top: 10px;

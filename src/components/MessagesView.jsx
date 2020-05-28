@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./MessagesView.css";
 import messageImg from "./img/message.png";
+import up from "./img/up.png";
 import dogImg from "./img/no-message.png";
 
 class MessagesView extends Component {
@@ -62,13 +63,14 @@ class MessagesView extends Component {
                   })}
                 </div>
                 <div className="rectangle">
+                  <div className="up"><img src={up} className="up" /></div>
                   <input
                     placeholder="Write a message"
                     type="text"
                     className="write-a-message"
                   />
-
-                  <img src={messageImg} className="message" />
+                  <div className="message"><img src={messageImg} className="message" /></div>
+                  
                 </div>
               </div>
             </div>
