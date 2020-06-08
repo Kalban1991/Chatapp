@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import "./MessagesView.css";
 import messageImg from "./img/message.png";
 import up from "./img/up.png";
@@ -12,10 +13,21 @@ class MessagesView extends Component {
       writing: "",
       hasMsgs: false,
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
-
+  componentWillUpdate() {
+    const node = ReactDOM.findDOMNode(this);
+    this.shouldScrollToBottom =
+      node.scrollTop + node.clientHeight >= NodeList.scrollHeight;
+  }
+  componentDidUpdate() {
+    if (this.shouldScrollToBottom) {
+      const node = ReactDOM.findDOMNode(this);
+      node.scrollTop = node.scrollHeight;
+    }
+  }
   onChange = (e) => {
-    console.log("wrote", e.target.value);
+    // console.log("wrote", e.target.value);
     this.setState({ writing: e.target.value });
   };
 
@@ -24,10 +36,24 @@ class MessagesView extends Component {
   };
 
   sendBtn = () => {
-    this.props.sendBtn(this.state.writing);
-    this.setState({ hasMsgs: true });
-    this.clearOnChange();
+    if (this.state.writing === "") {
+      throw this.error;
+    } else {
+      this.props.sendBtn(this.state.writing);
+      this.setState({ hasMsgs: true });
+      this.clearOnChange();
+    }
   };
+  handleSubmit(e) {
+    e.preventDefault();
+    if (this.state.writing === "") {
+      throw this.error;
+    } else {
+      this.props.sendBtn(this.state.writing);
+      this.setState({ hasMsgs: true });
+      this.clearOnChange();
+    }
+  }
 
   render() {
     const myId = 17;
@@ -51,8 +77,10 @@ class MessagesView extends Component {
                 <div className="start-messaging-agen-empty">
                   Start messaging agents, sellers, or even your friends
                 </div>
-                <div className="rectangle">
-                  <div className="up"><img src={up} className="up" /></div>
+                <form onSubmit={this.handleSubmit} className="rectangle">
+                  <div className="up">
+                    <img src={up} className="up" />
+                  </div>
                   <input
                     placeholder="Write a message"
                     type="text"
@@ -61,9 +89,9 @@ class MessagesView extends Component {
                     onChange={this.onChange}
                   />
                   <div className="sendBtn" onClick={this.sendBtn}>
-                    <img src={messageImg}/>
+                    <img src={messageImg} />
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           )}
@@ -89,18 +117,21 @@ class MessagesView extends Component {
                     );
                   })}
                 </div>
-                <div className="rectangle">
-                  <div className="up"><img src={up} className="up" /></div>
+                <form onSubmit={this.handleSubmit} className="rectangle">
+                  <div className="up">
+                    <img src={up} className="up" />
+                  </div>
                   <input
                     placeholder="Write a message"
                     type="text"
                     className="write-a-message"
                     value={this.state.writing}
-                    onChange={this.onChange}/>
+                    onChange={this.onChange}
+                  />
                   <div className="sendBtn" onClick={this.sendBtn}>
-                    <img src={messageImg}/>
+                    <img src={messageImg} />
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           )}
