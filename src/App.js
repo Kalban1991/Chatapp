@@ -86,15 +86,7 @@ class App extends Component {
     };
   }
 
-  sendMessage(message) {
-    console.log(message + " sent");
-  }
-
-  goBack() {
-    console.log("back");
-  }
   sendBtn = (newMsg) => {
-    console.log("sendBtn state", this.state);
     let { chats } = this.state;
     let msg = { ...this.state.chats.results[0] };
     msg.content = newMsg;
@@ -105,8 +97,6 @@ class App extends Component {
   };
 
   goToMsg = () => {
-    console.log("sendBtn state", this.state);
-    console.log("show msgs true");
     this.setState({ showMsgs: true });
   };
 
@@ -132,7 +122,6 @@ class App extends Component {
   }
 
   render() {
-    console.log("in render sendBtn state", this.state);
     return (
       <div class="main-window">
         <div className="comp">
@@ -140,12 +129,7 @@ class App extends Component {
         </div>
         <div className="comp">
           {this.state.showMsgs && (
-            <MessagesView
-              msgsList={this.state.chats}
-              sendMsg={this.sendMessage}
-              goBack={this.goBack}
-              sendBtn={this.sendBtn}
-            />
+            <MessagesView msgsList={this.state.chats} sendBtn={this.sendBtn} />
           )}
         </div>
       </div>
