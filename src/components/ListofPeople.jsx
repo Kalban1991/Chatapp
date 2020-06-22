@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link }  from 'react-router-dom';
 import "./list.css";
 import userIcon1 from "./img/icons/user-icons/nurseit.png";
 import userIcon2 from "./img/icons/user-icons/khach.png";
@@ -11,7 +12,7 @@ class ListofPeople extends Component {
         <div className="header">
           <div className="header-name">Chat</div>
         </div>
-
+        <Link key={5478} className="row" to={`/rooms/${5478}`}>
         <div className="conversation-list">
           <div className="conversation" onClick={this.props.goToMsg}>
             <img className="icon-img" src={userIcon1} alt="user icon" />
@@ -22,6 +23,7 @@ class ListofPeople extends Component {
             </div>
           </div>
         </div>
+        </Link>
         <div className="conversation-list">
           <div className="conversation" onClick={this.props.goToMsg}>
             <img className="icon-img" src={userIcon2} alt="user icon" />
