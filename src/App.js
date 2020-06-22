@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import ListofPeople from "./components/ListofPeople";
 import MessagesView from "./components/MessagesView";
 import "./App.css";
@@ -123,16 +124,31 @@ class App extends Component {
 
   render() {
     return (
-      <div class="main-window">
-        <div className="comp">
-          <ListofPeople pplList={this.state.rooms} goToMsg={this.goToMsg} />
-        </div>
-        <div className="comp">
-          {this.state.showMsgs && (
-            <MessagesView msgsList={this.state.chats} sendBtn={this.sendBtn} />
-          )}
-        </div>
-      </div>
+      <Router>
+            <Switch>
+              <div className="container">
+                <Route path="/" exact>
+                  <div class="main-window">
+                    <div className="comp">
+                      <ListofPeople pplList={this.state.rooms} goToMsg={this.goToMsg} />
+                    </div>
+                  </div>
+                </Route>
+                <Route path="/rooms/:roomId">
+                  <div class="main-window">
+                    <div className="comp">
+                      <ListofPeople pplList={this.state.rooms} goToMsg={this.goToMsg} />
+                    </div>
+                    <div className="comp">
+                    {this.state.showMsgs && (
+                      <MessagesView msgsList={this.state.chats} sendBtn={this.sendBtn} />
+                        )}
+                    </div>
+                  </div>
+                </Route>
+              </div>
+            </Switch>
+            </Router>
     );
   }
 }

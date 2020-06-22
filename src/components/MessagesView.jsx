@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router";
 import "./MessagesView.css";
 import messageImg from "./img/message.png";
 import up from "./img/up.png";
@@ -41,6 +42,7 @@ class MessagesView extends Component {
   }
 
   render() {
+    const {roomId} = this.props.match.params;
     const myId = 17;
     const messages = this.props.msgsList.results;
     const avatar = <img className="icon-img" src={userIcon1} alt="user icon" />;
@@ -109,4 +111,4 @@ class MessagesView extends Component {
   }
 }
 
-export default MessagesView;
+export default withRouter(MessagesView);
